@@ -1,0 +1,49 @@
+@import "../../styles/base.scss";
+.card{
+  border-radius: 10px;
+  width: 270px;
+  height: 140px;
+  margin: 40px 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  background-color: $color-yellow-fade;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.16);
+  border: 3px solid #8B8000;
+  .delete-card{
+    background-image: url("../../photos/times-circle.svg");
+    height: 18px;
+    width: 18px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  .flag-sign-input{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 5px;
+    .flag{
+      background-image: url("../../photos/Flag_of_Europe.svg");
+      background-repeat: no-repeat;
+      width: 60px;
+      height: 40px;
+      background-size: 60px 40px;
+    }
+    .sign{
+      font-size: 15px;
+    }
+    .input{
+      width: 40%;
+      font-size: 15px;
+      background-color: white;
+      border: solid 1px black;
+      box-shadow: 0 0 4px rgba(black, 0.03);
+    }
+  }
+}
+
+.card main-currency{
+  background-color: black;
+}

@@ -1,0 +1,109 @@
+@import "../../styles/base.scss";
+
+.backdrop {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1001;
+  user-select: none;
+  top: 0;
+  position: fixed;
+}
+
+.modal-wrapper {
+  background: white;
+  position: fixed;
+  top: 25%;
+  height: auto;
+  left: calc(50% - 200px);
+  max-width: 500px;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1002;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.16);
+  .modal-header {
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: flex-end;
+    height: 30px;
+    background-color: $color-orange;
+    .close-modal {
+      background-image: url("../../photos/times-circle.svg");
+      height: 20px;
+      width: 20px;
+      margin-top: 5px;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+  }
+
+  .modal-content {
+    background: white;
+    color: black;
+    padding: 10px 15px;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    .modal-card{
+      border: 1px solid #8B8000;
+      border-radius: 8px;
+      margin-bottom: 3px;
+      padding: 5px;
+      cursor: pointer;
+    }
+  }
+
+  .modal-footer{
+    display: flex;
+    justify-content: space-evenly;
+    height: 50px;
+    background-color: $color-yellow-fade;
+    align-items: center;
+    border-radius: 0 0 10px 10px;
+    .modal-reset-button{
+      height: 40px;
+      width: 120px;
+      color: black;
+      border-radius: 10px;
+      font-size: 17px;
+      font-weight: 350;
+      margin-top: 20px;
+      box-shadow: 0 8px 13px rgba(black, 0.16);
+      cursor: pointer;
+      user-select: none;
+      transition: box-shadow 0.15s, background-color 0.05s;
+      margin-bottom:15px;
+    }
+    .modal-add-button{
+      height: 40px;
+      width: 130px;
+      color: black;
+      border-radius: 10px;
+      font-size: 17px;
+      font-weight: 350;
+      margin-top: 20px;
+      box-shadow: 0 8px 13px rgba(black, 0.16);
+      cursor: pointer;
+      user-select: none;
+      transition: box-shadow 0.15s, background-color 0.05s;
+      margin-bottom:15px;
+    }
+  }
+}
+
+  .display-block {
+    display: block !important;
+  }
+
+  .hide {
+    display: none;
+  }
+
+@media only screen and (max-width: 600px) {
+  .modal-wrapper {
+    left: calc(50% - 178px);
+  }
+}
